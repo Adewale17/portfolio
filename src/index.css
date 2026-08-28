@@ -47,8 +47,8 @@
   .hero{padding-top:100px;min-height:auto}
   .hero-title{font-size:clamp(52px,15vw,78px);line-height:.9;letter-spacing:-.05em}
   .hero-grid{margin-top:42px}
-  .portrait-wrap{width:min(100%,420px);aspect-ratio:1/1;justify-self:center;transform:rotate(-6deg);transform-origin:center center}
-  .portrait-wrap:hover{transform:rotate(0deg) scale(1.01)}
+  .portrait-wrap{width:min(68vw,480px);aspect-ratio:1/1;justify-self:center;transform:none;transform-origin:center center}
+  .portrait-wrap:hover{transform:scale(1.01)}
 }
 
 /* Keep the photo's slant when the shared reveal animation runs. */
@@ -60,8 +60,9 @@
   .portrait-wrap[data-reveal].is-visible{transform:translateY(0) rotate(-7deg)}
 }
 @media(max-width:720px){
-  .portrait-wrap[data-reveal]{transform:translateY(24px) rotate(-6deg)}
-  .portrait-wrap[data-reveal].is-visible{transform:translateY(0) rotate(-6deg)}
+  .portrait-wrap[data-reveal]{transform:translateY(24px)}
+  .portrait-wrap[data-reveal].is-visible{transform:translateY(0)}
+  .portrait-wrap[data-reveal]:hover{transform:translateY(0) scale(1.01)}
 }
 @media(prefers-reduced-motion:reduce){
   .portrait-wrap[data-reveal],.portrait-wrap[data-reveal].is-visible{transform:rotate(-8deg)}
