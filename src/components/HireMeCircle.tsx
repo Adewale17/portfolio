@@ -1,0 +1,2 @@
+import { ArrowDownRight } from 'lucide-react'
+export default function HireMeCircle(){return <a className="hire-circle" href="#contact" aria-label="Go to contact section"><svg viewBox="0 0 150 150" aria-hidden="true"><defs><path id="hire-path" d="M 75,75 m -57,0 a 57,57 0 1,1 114,0 a 57,57 0 1,1 -114,0"/></defs><text><textPath href="#hire-path">HIRE ME • AVAILABLE FOR WORK • </textPath></text></svg><span><ArrowDownRight size={28}/></span></a>}

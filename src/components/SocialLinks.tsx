@@ -1,0 +1,4 @@
+import { AtSign, BriefcaseBusiness, GitBranch, UsersRound } from 'lucide-react'
+import { portfolio, isUsableLink } from '../data/portfolio'
+const socials=[{label:'GitHub',value:portfolio.github,Icon:GitBranch},{label:'LinkedIn',value:portfolio.linkedin,Icon:BriefcaseBusiness},{label:'X / Twitter',value:portfolio.twitter,Icon:AtSign},{label:'Facebook',value:portfolio.facebook,Icon:UsersRound}]
+export default function SocialLinks({showLabel=true}:{showLabel?:boolean}){return <div className="social-block">{showLabel&&<p className="eyebrow muted">Follow me</p>}<div className="social-links">{socials.map(({label,value,Icon})=>{const available=isUsableLink(value);return <a key={label} className={!available?'is-disabled':''} href={available?value:undefined} target={available?'_blank':undefined} rel="noreferrer" aria-label={available?label:`${label} link not added yet`} title={available?label:`Add ${label} in src/data/portfolio.js`}><Icon size={21}/></a>})}</div></div>}
