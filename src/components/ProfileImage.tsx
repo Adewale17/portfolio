@@ -5,7 +5,7 @@ export default function ProfileImage() {
     <div className="portrait-wrap" data-reveal>
       <div className="portrait-placeholder">
         <UserRound size={60} />
-        <span>Add your portrait</span>
+        <span>Profile Pic</span>
       </div>
       <img
         src={portfolio.profileImage}
